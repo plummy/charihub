@@ -3,7 +3,6 @@
            :html => {:id => "sign_up_user"},
            :format => :json,
            :remote => true  do |f|  
-  = f.error_notification
   = f.input  :name, placeholder: 'Name', :autofocus => true
   = f.input  :email, placeholder: 'Email'
   = f.input  :password, placeholder: 'Password'
