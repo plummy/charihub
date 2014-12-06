@@ -1,0 +1,30 @@
+
+section{
+	min-height: 100vh;
+	padding:100px 0;
+}
+
+section p{
+	margin: 10px auto;
+	width: 50%;
+	font-size: 18px;
+}
+
+#intro, #section2, #intro-slide{text-align: center;}
+#intro {
+	background: #10486D;
+	color: #fff;
+}
+
+#intro a{
+	color: #FFCA87;
+}
+#intro a:hover{
+	color: #F5AF56;
+}
+
+#intro-carousel{
+	width: 600px;
+	height: 300px;
+	margin: 0 auto;
+}
