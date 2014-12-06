@@ -5,9 +5,10 @@
 }
 
 section{
-	min-height: 100vh;
+	min-height: 90vh;
 	width: 100%;
 	padding:100px 0;
+	color: #f0f0f0;
 }
 
 section p{
@@ -19,7 +20,6 @@ section p{
 #intro, #section2, #intro-slide{text-align: center;}
 #intro {
 	background: #10486D;
-	color: #fff;
 }
 
 #intro a{
@@ -29,12 +29,18 @@ section p{
 	color: #F5AF56;
 }
 
+#section2{
+	background: #00A08D;
+}
+#intro-slide {
+	background: #555;
+}
 #intro-carousel{
-	width: 600px;
-	height: 300px;
+	width: 800px;
+	height: 400px;
 	margin: 0 auto;
 }
 
 footer#mainFooter{
-	margin-bottom: 20px;
+	margin: 20px 0;
 }
