@@ -42,7 +42,6 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '2.9.0'
-  gem "better_errors"
   gem "binding_of_caller"
 end
 
@@ -70,7 +69,7 @@ gem 'devise'
 
 # View
 gem 'haml'
-gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form', branch: 'master'
+gem 'simple_form'
 gem 'mustache'
 gem 'stache'
 
