@@ -8,7 +8,6 @@ class CreatePosts < ActiveRecord::Migration
       t.float :latitude
       t.belongs_to :user
       t.belongs_to :category
-
       t.timestamps
     end
   end
