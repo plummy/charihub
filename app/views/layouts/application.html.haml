@@ -11,6 +11,7 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   %body
+    = render 'layouts/header'
     .container
       - if notice
         .alert.alert-success.alert-dismissible{:role => "alert"}
@@ -29,4 +30,5 @@
               Close
           = alert
       = yield
+      = render 'layouts/footer'
       
