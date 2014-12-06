@@ -24,7 +24,7 @@
 
   <body>
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
-      <div class="container">
+      <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -33,7 +33,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <div class="navbar-brand" href="#">Charihub</div>
+          <div class="navbar-brand" href="#">ChariHub</div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,20 +48,22 @@
               <input type="text" class="form-control" placeholder="Email">
               <input type="password" class="form-control" placeholder="Password">
             </div>
-            <button type="submit" class="btn btn-default">Sign in</button>
+            <button type="submit" class="btn btn-success">Sign in</button>
           </form>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
 
     <section id="intro">
-      <img src="holder.js/200x200" alt="logo" />
-      <h1>Portal Sharing</h1>
-      <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#signIn">Join now</button>
-      <p class="small">or <a href="#">Sign in</a>
-
-
+      <img src="../../assets/images/logo.png" alt="logo" height="150" />
+      <p class="lead">Some people want to share, the others need helps. <br />
+        ChariHub connects them.
+      </p>
+      <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#signIn">Join now</button>
+      <br> or <a href="#">Sign in</a>
+      
     </section>
+
       <!-- Modal -->
       <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="joinNow" aria-hidden="true">
         <div class="modal-dialog">
@@ -107,14 +109,8 @@
         </div>
       </div>
 
-    <section id="section2">
-      <img src="holder.js/200x200" alt="logo" />
-      <h1>Place for finding help</h1>
-      <p>Help can come from anywhere, but sometimes you don't know how to find it. Imagine where we can share our difficulties and find someone that can help us.</p>
-    </section>
-
     <section id="intro-slide">
-      <h1>What Charihub can do?</h1>
+      <h1>What you can do on ChariHub?</h1>
       <div id="intro-carousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -150,11 +146,63 @@
       </div>
     </section>
 
-    <div class="container">
+    <section id="share">
+      <div class="container">
+        <h1 class="text-center">
+          <span class="text-primary">Share if you have more</span> <small>or</small> <span class="text-danger">Ask for help.</span>
+        </h1>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-body lead">
+                I have extra 100kg of rice after big ceremony at my house. Anyone who know where I should grand this rice, please contact me.
+              </div>
+              <div class="panel-footer"><a href="#">Annie</a> shares her <span class="label label-primary">Food</span> on Saturday, December 6, 2014</div>
+            </div>
+
+            <div class="panel panel-primary">
+              <div class="panel-body lead">
+                I want to grand my bonus salary this year to charity. Where is the place that urgently need?
+              </div>
+              <div class="panel-footer"><a href="#">Joey</a> shares her <span class="label label-primary">Money</span> on Saturday, December 6, 2014</div>
+            </div>
+
+            <div class="text-center">
+              <button class="btn btn-lg btn-primary">See all 39 donors</button>
+            </div>
+          </div><!-- /col-md-6 -->
+
+          <div class="col-md-6">
+            <div class="panel panel-danger">
+              <div class="panel-body lead">
+                My people in Desa Terpencil needs medicine.
+              </div>
+              <div class="panel-footer"><a href="#" class="text-danger">Annie</a> needs <span class="label label-danger">Medicine</span> on Saturday, December 6, 2014</div>
+            </div>
+
+            <div class="panel panel-danger">
+              <div class="panel-body lead">
+                Need help to renovate local orphanage.
+              </div>
+              <div class="panel-footer"><a href="#" class="text-danger">Joey</a> needs <span class="label label-danger">Money</span> on Saturday, December 6, 2014</div>
+            </div>
+
+            <div class="text-center">
+              <button class="btn btn-lg btn-danger">See all 39 needs</button>
+            </div>
+          </div><!-- /col-md-6 -->        </div>
+      </div>
+    </section>
+
+
+      <div class="container">
+        <hr>
     <footer id="mainFooter" class="text-muted">
-      Copyright &copy; 2014 Plummy
+
+        Copyright &copy; 2014 Plummy
     </footer>
-    </div>
+      </div>
+    
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

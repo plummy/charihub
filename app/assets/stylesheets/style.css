@@ -1,25 +1,26 @@
+h1{margin-bottom: 20px;}
 .navbar{margin-bottom: 0;}
 .navbar-brand{
 	font-weight: bold;
-	color: #00A08D !important;
+	color: #10631A !important;
 }
 
 section{
-	min-height: 90vh;
+	min-height: 100vh;
 	width: 100%;
 	padding:100px 0;
-	color: #f0f0f0;
+	
 }
 
 section p{
-	margin: 10px auto;
+	margin: 20px auto;
 	width: 50%;
 	font-size: 18px;
 }
 
-#intro, #section2, #intro-slide{text-align: center;}
+#intro, #intro-slide{text-align: center;color: #f0f0f0;}
 #intro {
-	background: #10486D;
+	background: #52A55C;
 }
 
 #intro a{
@@ -29,11 +30,8 @@ section p{
 	color: #F5AF56;
 }
 
-#section2{
-	background: #00A08D;
-}
 #intro-slide {
-	background: #555;
+	background: #00A08D;
 }
 #intro-carousel{
 	width: 800px;
@@ -41,6 +39,20 @@ section p{
 	margin: 0 auto;
 }
 
+#share .panel{
+	margin-bottom: 30px;
+}
+.panel-body.lead{
+	margin-bottom: 0;
+}
+.center-abs{
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	position: absolute;
+}
+#startShare{}
 footer#mainFooter{
 	margin: 20px 0;
 }
