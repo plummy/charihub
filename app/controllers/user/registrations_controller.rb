@@ -2,7 +2,6 @@ class User::RegistrationsController < Devise::RegistrationsController
   before_filter :update_sanitized_params, if: :devise_controller?
 
   def update_sanitized_params
-
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(
         :name,
         :email,
@@ -33,7 +32,5 @@ class User::RegistrationsController < Devise::RegistrationsController
 
   # Signs in a user on sign up. You can overwrite this method in your own
   # RegistrationsController.
-  def sign_up(resource_name, resource)
-    sign_in(resource_name, resource)
-  end
+  
 end
