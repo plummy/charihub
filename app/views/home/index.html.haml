@@ -15,26 +15,7 @@
           %span.sr-only Close
         %h4#myModalLabel.modal-title Join now!
       .modal-body
-        %form.form-horizontal{:role => "form"}
-          .form-group
-            %label.col-sm-4.control-label{:for => "joinName"} Name
-            .col-sm-6
-              %input#joinName.form-control{:placeholder => "Name", :type => "text"}/
-          .form-group
-            %label.col-sm-4.control-label{:for => "joinEmail"} Email
-            .col-sm-6
-              %input#joinEmail.form-control{:placeholder => "Email", :type => "email"}/
-          .form-group
-            %label.col-sm-4.control-label{:for => "joinPW"} Password
-            .col-sm-6
-              %input#joinPW.form-control{:placeholder => "Password", :type => "password"}/
-          .form-group
-            %label.col-sm-4.control-label{:for => "joinRePW"} Retype password
-            .col-sm-6
-              %input#joinRePW.form-control{:placeholder => "Retype password", :type => "password"}/
-          .form-group
-            .col-sm-offset-4.col-sm-10
-              %button.btn.btn-primary.btn-lg{:type => "submit"} Sign in
+        = render 'user/registrations/new'
 %section#section2
   %img{:alt => "logo", :src => "holder.js/200x200"}/
   %h1 Place for finding help
