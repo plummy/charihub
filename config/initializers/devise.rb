@@ -4,8 +4,9 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = 'faa3a4f50a86a4b196256264e2b733b631159844b70acb81871605aa8dd778eebb679551d38173e6ccbd9de4cfb729a43364e02a95c94f2f5713981756041752'
-  config.secret_key = 'e294480e0df0b23a8d2c5073f801cc3a2da4c0e8db88cfcd5e74c229733ee1383d7f26a39c02654c8d71d599befd1afbe4cbea7619a45c5f61c15917e5bff2bb'
+
+  config.secret_key = 'faa3a4f50a86a4b196256264e2b733b631159844b70acb81871605aa8dd778eebb679551d38173e6ccbd9de4cfb729a43364e02a95c94f2f5713981756041752'
+
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
@@ -62,7 +63,7 @@ Devise.setup do |config|
   # config.http_authenticatable = false
 
   # If 401 status code should be returned for AJAX requests. True by default.
-  # config.http_authenticatable_on_xhr = true
+   config.http_authenticatable_on_xhr = false
 
   # The realm used in Http Basic Authentication. 'Application' by default.
   # config.http_authentication_realm = 'Application'
@@ -140,7 +141,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length.
-  config.password_length = 8..128
+  config.password_length = 6..128
 
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
@@ -224,7 +225,7 @@ Devise.setup do |config|
   # should add them to the navigational formats lists.
   #
   # The "*/*" below is required to match Internet Explorer requests.
-  # config.navigational_formats = ['*/*', :html]
+   config.navigational_formats = ['*/*', :html, :json]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete

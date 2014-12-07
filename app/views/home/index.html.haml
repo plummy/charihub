@@ -1,0 +1,92 @@
+%section#intro
+  %img{:alt => "logo", :height => "150", :src => image_path("logo.png")}/
+  %p.lead
+    Some people want to share, the others need helps.
+    %br/
+    ChariHub connects them.
+  %button.btn.btn-warning.btn-lg{"data-target" => "#signIn", "data-toggle" => "modal", :type => "button"} Join now
+  %br/
+  or
+  %a{:href => "#"} Sign in
+/ Modal
+#signIn.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "joinNow", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+          %span.sr-only Close
+        %h4#myModalLabel.modal-title Join now!
+      .modal-body
+        = render 'user/registrations/new'
+%section#intro-slide
+  %h1 What you can do on ChariHub?
+  #intro-carousel.carousel.slide{"data-ride" => "carousel"}
+    / Indicators
+    %ol.carousel-indicators
+      %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+      %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+    / Wrapper for slides
+    .carousel-inner{:role => "listbox"}
+      .item.active
+        %img{:alt => "Slide1", :src => "holder.js/800x400"}/
+        .carousel-caption
+          Awesome
+      .item
+        %img{:alt => "Slide2", :src => "holder.js/800x400"}/
+        .carousel-caption
+          Slide2
+    / Controls
+    %a.left.carousel-control{"data-slide" => "prev", :href => "#intro-carousel", :role => "button"}
+      %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+      %span.sr-only Previous
+    %a.right.carousel-control{"data-slide" => "next", :href => "#intro-carousel", :role => "button"}
+      %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+      %span.sr-only Next
+%section#share
+  .container
+    %h1.text-center
+      %span.text-primary Share if you have more
+      %small or
+      %span.text-danger Ask for help.
+    .row
+      .col-md-6
+        .panel.panel-primary
+          .panel-body.lead
+            I have extra 100kg of rice after big ceremony at my house. Anyone who know where I should grand this rice, please contact me.
+          .panel-footer
+            %a{:href => "#"} Annie
+            shares her
+            %span.label.label-primary Food
+            on Saturday, December 6, 2014
+        .panel.panel-primary
+          .panel-body.lead
+            I want to grand my bonus salary this year to charity. Where is the place that urgently need?
+          .panel-footer
+            %a{:href => "#"} Joey
+            shares her
+            %span.label.label-primary Money
+            on Saturday, December 6, 2014
+        .text-center
+          %button.btn.btn-lg.btn-primary See all 39 donors
+      / /col-md-6
+      .col-md-6
+        .panel.panel-danger
+          .panel-body.lead
+            My people in Desa Terpencil needs medicine.
+          .panel-footer
+            %a.text-danger{:href => "#"} Annie
+            needs
+            %span.label.label-danger Medicine
+            on Saturday, December 6, 2014
+        .panel.panel-danger
+          .panel-body.lead
+            Need help to renovate local orphanage.
+          .panel-footer
+            %a.text-danger{:href => "#"} Joey
+            needs
+            %span.label.label-danger Money
+            on Saturday, December 6, 2014
+        .text-center
+          %button.btn.btn-lg.btn-danger See all 39 needs
+      / /col-md-6
