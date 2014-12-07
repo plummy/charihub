@@ -1,27 +1,40 @@
-h1{margin-bottom: 20px;}
+h1{
+	margin-bottom: 20px;
+	color: #1e824c;
+	font-size: 42px;
+}
 .navbar{margin-bottom: 0;}
+.navbar-static-top{
+	background: #10631A;
+	border-bottom: 1px solid #004208;
+}
 .navbar-brand{
 	font-weight: bold;
 	color: #10631A !important;
+	padding-top: 0 !important;
 }
+.navbar form{margin-top: 8px;}
+.navbar .container-fluid .navbar-right {margin-right: 20px;}
 
 section{
 	min-height: 100vh;
-	width: 100%;
-	padding:100px 0;
-	
+	width: 100%;	
 }
 
-section p{
+p.intro{
 	margin: 20px auto;
 	width: 50%;
 	font-size: 18px;
 }
 
 #intro, #intro-slide{text-align: center;color: #f0f0f0;}
+
 #intro {
-	background: #52A55C;
+	background: #1e824c;
+	padding-top: 50px;
 }
+#intro nav{margin-bottom:  100px;}
+#intro h1 {color: inherit;}
 
 #intro a{
 	color: #FFCA87;
@@ -30,19 +43,20 @@ section p{
 	color: #F5AF56;
 }
 
-#intro-slide {
-	background: #00A08D;
+#intro-feature {
+	padding: 50px 0 100px;
 }
-#intro-carousel{
-	width: 800px;
-	height: 400px;
-	margin: 0 auto;
+#intro-feature h1{
+	margin-bottom: 40px;
 }
 
+#share{
+	padding: 50px 0 100px; 
+}
 #share .panel{
 	margin-bottom: 30px;
 }
-.panel-body.lead{
+#share.panel-body.lead{
 	margin-bottom: 0;
 }
 .center-abs{
@@ -52,7 +66,7 @@ section p{
 	right: 0;
 	position: absolute;
 }
-#startShare{}
+
 footer#mainFooter{
 	margin: 20px 0;
 }
