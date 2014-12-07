@@ -30,5 +30,17 @@
               %a{:href => "#"} Account
             %li
               %a{:href => "#"} Log out
+      %ul.nav.navbar-nav
+        %li.active
+          %a{:href => "#"} Home
+        %li
+          %a{:href => "#"} About
+      %form.navbar-form.navbar-right{:role => "login"}
+        .form-group
+          %input.form-control{:placeholder => "Email", :type => "text"}/
+          %input.form-control{:placeholder => "Password", :type => "password"}/
+        %button.btn.btn-default{:type => "submit"} Sign in
+        / just for dev
+        %li= link_to "Sign out", destroy_user_session_path, :method => :delete
     / /.navbar-collapse
   / /.container-fluid

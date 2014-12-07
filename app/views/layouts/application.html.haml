@@ -11,7 +11,8 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   %body
-    = render 'layouts/header'
+    - if user_signed_in?
+      = render 'layouts/header'
     - if notice
       .alert.alert-success.alert-dismissible{:role => "alert"}
         %button.close{:type => "button", data: {:dismiss => "alert"}}

@@ -6,9 +6,7 @@ class User < ActiveRecord::Base
 
 	# Validations
 	validates :name, presence: true
-	validates :email, presence: true
-	validates :password, presence: true
-
+	
 	has_many :posts, dependent: :destroy
 
 	#after_create :skip_conf!
