@@ -1,5 +1,57 @@
-%h1 Hello, world!
-/ jQuery (necessary for Bootstrap's JavaScript plugins)
-%script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
-/ Include all compiled plugins (below), or include individual files as needed
-%script{:src => "js/bootstrap.min.js"}
+.container-fluid
+  .row
+    .col-sm-3.col-md-2.sidebar
+      %h3 Hello, Username!
+      %ul.nav.nav-sidebar
+        %li.active
+          %a{:href => "#"}
+            %span.glyphicon.glyphicon-home
+            Dashboard
+            %span.sr-only (current)
+        %li
+          %a{:href => "#"} 
+            %span.glyphicon.glyphicon-map-marker
+            Maps
+        %li
+          %a{:href => "#"} 
+            %span.glyphicon.glyphicon-stats
+            Stats
+        
+      %ul.nav.nav-sidebar
+        %li
+          %a{:href => ""} Nav item
+        %li
+          %a{:href => ""} Nav item again
+        %li
+          %a{:href => ""} One more nav
+        %li
+          %a{:href => ""} Another nav item
+        %li
+          %a{:href => ""} More navigation
+      %ul.nav.nav-sidebar
+        %li
+          %a{:href => ""} Nav item again
+        %li
+          %a{:href => ""} One more nav
+        %li
+          %a{:href => ""} Another nav item
+    .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+      %h1.page-header Dashboard
+      .row.placeholders
+        .col-xs-6.col-sm-3.placeholder
+          %img.img-responsive{:alt => "Generic placeholder thumbnail", "data-src" => "holder.js/200x200/auto/sky"}
+            %h4 Label
+            %span.text-muted Something else
+        .col-xs-6.col-sm-3.placeholder
+          %img.img-responsive{:alt => "Generic placeholder thumbnail", "data-src" => "holder.js/200x200/auto/vine"}
+            %h4 Label
+            %span.text-muted Something else
+        .col-xs-6.col-sm-3.placeholder
+          %img.img-responsive{:alt => "Generic placeholder thumbnail", "data-src" => "holder.js/200x200/auto/sky"}
+            %h4 Label
+            %span.text-muted Something else
+        .col-xs-6.col-sm-3.placeholder
+          %img.img-responsive{:alt => "Generic placeholder thumbnail", "data-src" => "holder.js/200x200/auto/vine"}
+            %h4 Label
+            %span.text-muted Something else
+      %h2.sub-header Section title
