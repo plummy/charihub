@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => {registrations: 'user/registrations'}
 
   get "/home", to: 'home#index'
+  get "/dash", to: 'static_pages#dashboard'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
