@@ -11,7 +11,7 @@ h1{
 .navbar-brand{
 	font-weight: bold;
 	color: #10631A !important;
-	padding-top: 0 !important;
+	padding-top: 10px !important;
 }
 .navbar form{margin-top: 8px;}
 .navbar .container-fluid .navbar-right {margin-right: 20px;}
@@ -31,9 +31,9 @@ p.intro{
 
 #intro {
 	background: #1e824c;
-	padding-top: 50px;
+	padding: 50px 100px;
 }
-#intro nav{margin-bottom:  100px;}
+#intro nav{margin-bottom:  50px;}
 #intro h1 {color: inherit;}
 
 #intro a{

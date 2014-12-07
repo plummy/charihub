@@ -10,9 +10,9 @@
             %span.icon-bar
             %span.icon-bar
           .navbar-brand{:href => "#"}
-            %img{:height => "50", :src => "assets/images/logo-nav.png"}/
+            %img{:height => "50", :src => image_path("logo-nav.png")}/
       / /.container-fluid
-  %img{:alt => "logo", :src => "assets/images/logo-landing.png"}/
+  %img{:alt => "logo", :src => image_path("logo-landing.png")}/
   %h1 
     One stop Portal 
     for Sharing
@@ -24,6 +24,7 @@
   %p.small
     or
     %a{:href => "#"} Sign in
+
 / Modal
 #signIn.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "joinNow", :role => "dialog", :tabindex => "-1"}
   .modal-dialog
@@ -35,6 +36,7 @@
         %h4#myModalLabel.modal-title Join now!
       .modal-body
         = render 'user/registrations/new'
+
 %section#intro-feature.text-center
   .container
     %h1 Imagine we can help each other
