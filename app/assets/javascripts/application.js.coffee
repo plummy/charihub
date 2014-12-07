@@ -17,11 +17,11 @@
 #= require_tree .
 #= require jquery.turbolinks
 
-$("#sign_up_user").bind "ajax:success", (e, data, status, xhr) ->
+$(document).on "ajax:success", "form#sign_up_user", (e, data, status, xhr) ->
     if data.success
-      $('#sign_up').modal('hide')
-      $('#sign_up_button').hide()
-      $('#submit_comment').slideToggle(1000, "easeOutBack" )
-    else
-      alert('failure!')
+    	$('#signIn').modal('hide')
+    	$('#sign_up_button').hide()
+    	$('#submit_comment').slideToggle(1000, "easeOutBack" )
+    
+
 

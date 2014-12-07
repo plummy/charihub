@@ -1,4 +1,4 @@
-%nav.navbar.navbar-default.navbar-static-top{:role => "navigation"}
+%nav.navbar.navbar-static-top{:role => "navigation"}
   .container-fluid
     / Brand and toggle get grouped for better mobile display
     .navbar-header
@@ -7,18 +7,29 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      .navbar-brand{:href => "#"} Charihub
+      .navbar-brand{:href => "#"} 
+        %img{:src => image_path("logo-landing.png"), :height => "35"}
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
-      %ul.nav.navbar-nav
-        %li.active
-          %a{:href => "#"} Home
-        %li
-          %a{:href => "#"} About
-      %form.navbar-form.navbar-right{:role => "login"}
-        .form-group
-          %input.form-control{:placeholder => "Email", :type => "text"}/
-          %input.form-control{:placeholder => "Password", :type => "password"}/
-        %button.btn.btn-default{:type => "submit"} Sign in
+      .navbar-left.col-md-5
+        %form{:role => "search"}
+          .input-group
+            %input.form-control{:placeholder => "Find people, need, help, or location", :type => "text", :width =>"30"}/
+            %span.input-group-btn
+              %button.btn.btn-warning{:type => "submit", :title => "Search"} Search
+
+      .navbar-right
+        .btn-group.navbar-btn
+          %button.btn.btn-default.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
+            = current_user.name
+            %span.caret
+          %ul.dropdown-menu{:role => "menu"}
+            %li
+              %a{:href => "#"} Profile
+            %li
+              %a{:href => "#"} Account
+            %li
+              %li= link_to "Log out", destroy_user_session_path, :method => :delete
+      
     / /.navbar-collapse
   / /.container-fluid

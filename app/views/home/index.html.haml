@@ -1,10 +1,27 @@
 %section#intro
-  %img{:alt => "logo", :height => "150", :src => image_path("logo.png")}/
+  .container
+    %nav.navbar{:role => "navigation"}
+      .container-fluid
+        / Brand and toggle get grouped for better mobile display
+        .navbar-header
+          %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          .navbar-brand{:href => "#"}
+            %img{:height => "50", :src => image_path("logo-nav.png")}/
+      / /.container-fluid
+  %img{:alt => "logo", :src => image_path("logo-landing.png")}/
+  %h1 
+    One stop Portal 
+    for Sharing
   %p.lead
     Some people want to share, the others need helps.
-    %br/
-    ChariHub connects them.
-  %button.btn.btn-warning.btn-lg{"data-target" => "#signIn", "data-toggle" => "modal", :type => "button"} Join now
+    %br
+    ChariHub connects them. 
+  
+  %button#sign_up_button.btn.btn-warning.btn-lg{"data-target" => "#signIn", "data-toggle" => "modal", :type => "button"} Join now
   %br/
   or
   %a{:href => "#"} Sign in
@@ -19,30 +36,30 @@
         %h4#myModalLabel.modal-title Join now!
       .modal-body
         = render 'user/registrations/new'
-%section#intro-slide
-  %h1 What you can do on ChariHub?
-  #intro-carousel.carousel.slide{"data-ride" => "carousel"}
-    / Indicators
-    %ol.carousel-indicators
-      %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
-      %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
-    / Wrapper for slides
-    .carousel-inner{:role => "listbox"}
-      .item.active
-        %img{:alt => "Slide1", :src => "holder.js/800x400"}/
-        .carousel-caption
-          Awesome
-      .item
-        %img{:alt => "Slide2", :src => "holder.js/800x400"}/
-        .carousel-caption
-          Slide2
-    / Controls
-    %a.left.carousel-control{"data-slide" => "prev", :href => "#intro-carousel", :role => "button"}
-      %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
-      %span.sr-only Previous
-    %a.right.carousel-control{"data-slide" => "next", :href => "#intro-carousel", :role => "button"}
-      %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
-      %span.sr-only Next
+
+%section#intro-feature.text-center
+  .container
+    %h1 Imagine we can help each other
+    .row
+      .col-md-4
+        %img{:alt => "logo", :src => "holder.js/200x200"}/
+        %h2 Place for sharing
+        %p.lead Help can come from anywhere, but sometimes you don't know how to find it. Imagine where we can share our difficulties and find someone that can help us.
+        %button.btn.btn-warning Learn more &raquo;
+      .col-md-4
+        %img{:alt => "logo", :src => "holder.js/200x200"}/
+        %h2 Place for finding help
+        %p.lead Help can come from anywhere, but sometimes you don't know how to find it. Imagine where we can share our difficulties and find someone that can help us.
+        %button.btn.btn-warning Learn more &raquo;
+      .col-md-4
+        %img{:alt => "logo", :src => "holder.js/200x200"}/
+        %h2 Know the world
+        %p.lead Help can come from anywhere, but sometimes you don't know how to find it. Imagine where we can share our difficulties and find someone that can help us.
+        %button.btn.btn-warning Learn more &raquo;
+
+.container
+  %hr
+
 %section#share
   .container
     %h1.text-center
