@@ -17,7 +17,7 @@
 #= require_tree .
 #= require jquery.turbolinks
 
-$("form#sign_up_user").bind "ajax:success", (e, data, status, xhr) ->
+$("#sign_up_user").bind "ajax:success", (e, data, status, xhr) ->
     if data.success
       $('#sign_up').modal('hide')
       $('#sign_up_button').hide()

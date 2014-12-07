@@ -1,10 +1,7 @@
-= simple_form_for resource, :as => resource_name,
-           :url => user_registration_path(resource_name),
-           :html => {:id => "sign_up_user"},
-           :format => :json,
-           :remote => true  do |f|  
+= simple_form_for resource, :as => resource_name, :url => user_registration_path(resource_name), :html => {:id => "sign_up_user"}, :format => :json, :remote => true  do |f|  
+  = f.error_notification
   = f.input  :name, placeholder: 'Name', :autofocus => true
   = f.input  :email, placeholder: 'Email'
   = f.input  :password, placeholder: 'Password'
   = f.input  :password_confirmation, placeholder: 'Type Password Again'
-  = f.button :submit, "Register!", input_html: { class: 'btn btn-medium btn-success' }
+  = f.button :submit, input_html: { class: 'btn btn-primary btn-success' }
