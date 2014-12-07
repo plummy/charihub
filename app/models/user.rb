@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
 	# Validations
 	validates :name, presence: true
 
+	geocoded_by :full_address
+	after_validation :geocode
+
 	has_many :posts, dependent: :destroy
 	has_many :comments, dependent: :destroy
 	
