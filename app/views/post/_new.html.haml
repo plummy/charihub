@@ -1,0 +1,8 @@
+= simple_form_for(@post, :url => create_post_path, :html => {:id => "sign_up_user"}, :format => :json, :remote => true) do |f|
+  = f.input :message, placeholder: 'Give people a reason why they should help you or why help can you provide?' 
+  = f.input :full_address, placeholder: 'e.g 714 Green St, Big Town, MO'
+  = f.input :phone, placeholder: 'Phone number that they can contact to'
+  = f.input :post_type, collection: Post.post_types.map { |k, v| [k.humanize, k] }, :selected => :share_something, :label => "You need something or want to share something?"
+  = f.association :category
+  
+  = f.button :submit, "Submit!", input_html: { class: 'btn btn-primary' }
