@@ -1,5 +1,5 @@
 = simple_form_for(resource, :as => resource_name, :url => user_registration_path, :html => {:id => "sign_up_user"}, :format => :json, :remote => true)  do |f|  
-  = f.error_notification
+  = devise_error_messages!
   = f.input  :name, placeholder: 'Name', :autofocus => true
   = f.input  :email, placeholder: 'Email'
   = f.input  :password, placeholder: 'Password'

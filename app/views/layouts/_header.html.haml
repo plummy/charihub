@@ -20,5 +20,7 @@
           %input.form-control{:placeholder => "Email", :type => "text"}/
           %input.form-control{:placeholder => "Password", :type => "password"}/
         %button.btn.btn-default{:type => "submit"} Sign in
+        / just for dev
+        %li= link_to "Sign out", destroy_user_session_path, :method => :delete
     / /.navbar-collapse
   / /.container-fluid
