@@ -19,9 +19,17 @@
 
 $(document).on "ajax:success", "form#sign_up_user", (e, data, status, xhr) ->
     if data.success
-    	$('#signIn').modal('hide')
+    	$('#sign_up').modal('hide')
     	$('#sign_up_button').hide()
     	$('#submit_comment').slideToggle(1000, "easeOutBack" )
+    	location.href = "/dashboard"
+
+$(document).on "ajax:success", "form#sign_in_user", (e, data, status, xhr) ->
+    if data.success
+    	$('#sign_in').modal('hide')
+    	$('#sign_in_button').hide()
+    	$('#submit_comment').slideToggle(1000, "easeOutBack" )
+    	location.href = "/dashboard"
     
 
 

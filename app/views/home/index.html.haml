@@ -19,13 +19,12 @@
     Some people want to share, the others need helps.
     %br
     ChariHub connects them. 
-  %button.btn.btn-warning.btn-lg{"data-target" => "#signIn", "data-toggle" => "modal", :type => "button"} Join now
-  %p.small
+  %button.btn.btn-warning.btn-lg{"data-target" => "#sign_up", "data-toggle" => "modal", :type => "button"} Join now
+  %p.medium
     or
-    %a{:href => "#"} Sign in  
-  %button#sign_up_button.btn.btn-warning.btn-lg{"data-target" => "#signIn", "data-toggle" => "modal", :type => "button"} Join now
+  %button#sign_in_button.btn.btn-info.btn-small{"data-target" => "#sign_in", "data-toggle" => "modal", :type => "button"} Sign in
 / Modal
-#signIn.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "joinNow", :role => "dialog", :tabindex => "-1"}
+#sign_up.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "joinNow", :role => "dialog", :tabindex => "-1"}
   .modal-dialog
     .modal-content
       .modal-header
@@ -35,6 +34,18 @@
         %h4#myModalLabel.modal-title Join now!
       .modal-body
         = render 'user/registrations/new'
+
+/ Modal
+#sign_in.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "logIn", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+          %span.sr-only Close
+        %h4#myModalLabel.modal-title Sign in
+      .modal-body
+        = render 'user/sessions/new'
 
 %section#intro-feature.text-center
   .container

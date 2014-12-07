@@ -72,6 +72,7 @@ gem 'haml'
 gem 'simple_form'
 gem 'mustache'
 gem 'stache'
+gem 'chartkick'
 
 # View || 
 gem 'bootstrap-sass'

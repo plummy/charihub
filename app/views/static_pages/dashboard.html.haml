@@ -1,7 +1,7 @@
 .container-fluid
   .row
     .col-sm-3.col-md-2.sidebar
-      %h3 Hello, Username!
+      %h4 Hello, #{current_user.name} !
       %ul.nav.nav-sidebar
         %li.active
           %a{:href => "#"}
@@ -17,24 +17,6 @@
             %span.glyphicon.glyphicon-stats
             Stats
         
-      %ul.nav.nav-sidebar
-        %li
-          %a{:href => ""} Nav item
-        %li
-          %a{:href => ""} Nav item again
-        %li
-          %a{:href => ""} One more nav
-        %li
-          %a{:href => ""} Another nav item
-        %li
-          %a{:href => ""} More navigation
-      %ul.nav.nav-sidebar
-        %li
-          %a{:href => ""} Nav item again
-        %li
-          %a{:href => ""} One more nav
-        %li
-          %a{:href => ""} Another nav item
     .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
       %h1.page-header Dashboard
       .row.placeholders

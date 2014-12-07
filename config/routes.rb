@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root :to => 'home#index'  
-  devise_for :users, :controllers => {registrations: 'user/registrations'}
+  devise_for :users, :controllers => {registrations: 'user/registrations', sessions: 'user/sessions'}
 
   get "/home", to: 'home#index'
   get "/dashboard", to: 'static_pages#dashboard'
