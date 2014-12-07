@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141206180402) do
+ActiveRecord::Schema.define(version: 20141207123448) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20141206180402) do
     t.datetime "updated_at"
     t.boolean  "status",       default: false
     t.integer  "view_counter"
+    t.integer  "type"
   end
 
   create_table "users", force: true do |t|
