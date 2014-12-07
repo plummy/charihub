@@ -8,7 +8,7 @@
         %span.icon-bar
         %span.icon-bar
       .navbar-brand{:href => "#"} 
-        %img{:src => image_path("logo-landing.png"), :height => "35"}/
+        %img{:src => image_path("logo-landing.png"), :height => "35"}
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       .navbar-left.col-md-5
@@ -21,7 +21,7 @@
       .navbar-right
         .btn-group.navbar-btn
           %button.btn.btn-default.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
-            Username
+            = current_user.name
             %span.caret
           %ul.dropdown-menu{:role => "menu"}
             %li
@@ -29,18 +29,7 @@
             %li
               %a{:href => "#"} Account
             %li
-              %a{:href => "#"} Log out
-      %ul.nav.navbar-nav
-        %li.active
-          %a{:href => "#"} Home
-        %li
-          %a{:href => "#"} About
-      %form.navbar-form.navbar-right{:role => "login"}
-        .form-group
-          %input.form-control{:placeholder => "Email", :type => "text"}/
-          %input.form-control{:placeholder => "Password", :type => "password"}/
-        %button.btn.btn-default{:type => "submit"} Sign in
-        / just for dev
-        %li= link_to "Sign out", destroy_user_session_path, :method => :delete
+              %li= link_to "Log out", destroy_user_session_path, :method => :delete
+      
     / /.navbar-collapse
   / /.container-fluid
