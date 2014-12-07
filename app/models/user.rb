@@ -6,12 +6,8 @@ class User < ActiveRecord::Base
 
 	# Validations
 	validates :name, presence: true
-	
+
 	has_many :posts, dependent: :destroy
-
-	#after_create :skip_conf!
-
-	def skip_conf!
-		self.confirm! if Rails.env.development?
-	end
+	has_many :comments, dependent: :destroy
+	
 end

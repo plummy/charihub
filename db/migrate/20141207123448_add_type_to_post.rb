@@ -1,5 +1,5 @@
 class AddTypeToPost < ActiveRecord::Migration
   def change
-    add_column :posts, :type, :int, limit: 1
+    add_column :posts, :user, :belongs_to
   end
 end
