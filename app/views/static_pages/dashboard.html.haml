@@ -1,6 +1,7 @@
 .container-fluid
   .row
     .col-sm-3.col-md-2.sidebar
+      %br
       %h4 Hello, #{current_user.name} !
       %ul.nav.nav-sidebar
         %li.active
@@ -8,6 +9,10 @@
             %span.glyphicon.glyphicon-home
             Dashboard
             %span.sr-only (current)
+        %li.active
+          %a{:href => "#"}
+            %span.glyphicon.glyphicon-home
+            Feeds
         %li
           %a{:href => "#"} 
             %span.glyphicon.glyphicon-map-marker
@@ -16,6 +21,10 @@
           %a{:href => "#"} 
             %span.glyphicon.glyphicon-stats
             Stats
+        %li
+          %a{"data-target" => "#new_post", "data-toggle" => "modal", :type => "button"} 
+            %span.glyphicon.glyphicon-plus
+            New Post
     .col-sm-4.col-md-10
       = render 'map/map'    
     .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
@@ -38,3 +47,14 @@
             %h4 Label
             %span.text-muted Something else
       %h2.sub-header Section title
+
+#new_post.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "logIn", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+          %span.sr-only Close
+        %h4#myModalLabel.modal-title New Post
+      .modal-body
+        = render 'post/new'
