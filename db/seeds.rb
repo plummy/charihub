@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+category_list = [
+  [ "Food", "You are hungry or have food to share?" ],
+  [ "Medicine", "Don't throw away your medicine, someone might need them" ],
+  [ "Money", "Need money to build your orphanage, temple or church?" ],
+  [ "Machinery", "Have old stuff that still can be used by other people?" ]
+]
+
+category_list.each do |name, desc|
+	Category.create(name: name, desc: desc)
+end
