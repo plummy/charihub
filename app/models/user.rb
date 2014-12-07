@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
 	has_many :posts, dependent: :destroy
 
-	after_create :skip_conf!
+	#after_create :skip_conf!
 
 	def skip_conf!
 		self.confirm! if Rails.env.development?
