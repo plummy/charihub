@@ -80,8 +80,6 @@ GEM
     erubis (2.7.0)
     execjs (2.2.2)
     ffi (1.9.6)
-    font-awesome-sass (4.2.2)
-      sass (~> 3.2)
     geocoder (1.2.6)
     haml (4.0.6)
       tilt
@@ -230,7 +228,6 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   country_select
   devise
-  font-awesome-sass
   geocoder
   haml
   haml-rails

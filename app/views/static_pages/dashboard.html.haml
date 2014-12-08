@@ -3,32 +3,32 @@
     .col-sm-3.col-md-2.sidebar
       - 2.times do
         %br
-      
-      %table.table
-        %thead
-          %tr
-            %th Hello, #{current_user.name} !
-        %tbody
-          %tr
-            %td
-              %span.fa.fa-home
-              = link_to 'Dashboard', preview_dashboard_static_pages_path,  :remote => true
-          %tr
-            %td
-              = link_to 'Feed', '#' 
-          %tr
-            %td
-              %span.fa.fa-home
-              = link_to 'Map', preview_map_static_pages_path,  :remote => true
-          %tr
-            %td
-              %span.fa.fa-home
-              = link_to 'Stats', preview_stats_static_pages_path,  :remote => true
-          %tr
-            %td
-              %a{"data-target" => "#new_post", "data-toggle" => "modal", :type => "button"} 
-                %span.glyphicon.glyphicon-plus
-                New Post
+      .well
+        %table.table
+          %thead
+            %tr
+              %th Hello, #{current_user.name} !
+          %tbody
+            %tr
+              %td
+                %span.fa.fa-home
+                = link_to 'Dashboard', preview_dashboard_static_pages_path,  :remote => true
+            %tr
+              %td.fa.fa-newspaper-o
+                = link_to 'Feed', '#' 
+            %tr
+              %td
+                %span.fa.fa-map-marker
+                = link_to 'Map', preview_map_static_pages_path,  :remote => true
+            %tr
+              %td
+                %span.fa.fa-bar-chart
+                = link_to 'Stats', preview_stats_static_pages_path,  :remote => true
+            %tr
+              %td
+                %a{"data-target" => "#new_post", "data-toggle" => "modal", :type => "button"} 
+                  %span.fa.fa-plus
+                  New Post
           
       
     .col-sm-4.col-md-10

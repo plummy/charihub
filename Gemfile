@@ -79,7 +79,6 @@ gem 'haml-rails'
 # View || 
 gem 'bootstrap-sass'
 gem 'kaminari-bootstrap'
-gem 'font-awesome-sass'
 # Table pagination
 gem 'kaminari'
 
