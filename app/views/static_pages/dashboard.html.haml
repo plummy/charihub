@@ -14,20 +14,17 @@
             %span.glyphicon.glyphicon-home
             Feeds
         %li
-          %a{:href => "#"} 
-            %span.glyphicon.glyphicon-map-marker
-            Maps
+          = link_to 'Map', preview_map_static_pages_path,  :remote => true
         %li
-          %a{:href => "#"} 
-            %span.glyphicon.glyphicon-stats
-            Stats
+          = link_to 'Stats', preview_stats_static_pages_path,  :remote => true
         %li
           %a{"data-target" => "#new_post", "data-toggle" => "modal", :type => "button"} 
             %span.glyphicon.glyphicon-plus
             New Post
     .col-sm-4.col-md-10
-      = render 'map/map'
-      = render 'stats/stats'    
+      #dashboard_preview
+        /= render 'map/map'
+        /= render 'stats/stats'    
     .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
       %h1.page-header Dashboard
       .row.placeholders
