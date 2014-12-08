@@ -4,11 +4,6 @@
       .container-fluid
         / Brand and toggle get grouped for better mobile display
         .navbar-header
-          %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
           .navbar-brand{:href => "#"}
             %img{:height => "50", :src => image_path("logo-nav.png")}/
       / /.container-fluid
@@ -23,7 +18,6 @@
   %p.small
     or
     %a{:href => "#"} Sign in  
-  %button#sign_up_button.btn.btn-warning.btn-lg{"data-target" => "#signIn", "data-toggle" => "modal", :type => "button"} Join now
 / Modal
 #signIn.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "joinNow", :role => "dialog", :tabindex => "-1"}
   .modal-dialog

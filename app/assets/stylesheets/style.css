@@ -70,3 +70,10 @@ p.intro{
 footer#mainFooter{
 	margin: 20px 0;
 }
+
+.alert {
+	margin-bottom: 0 !important;
+}
+.navbar-toggle {
+	border-color: #f00;
+}
