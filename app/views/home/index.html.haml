@@ -17,7 +17,8 @@
   %button.btn.btn-warning.btn-lg{"data-target" => "#sign_up", "data-toggle" => "modal", :type => "button"} Join now
   %p.medium
     or
-    %a{:href => "#"} Sign in  
+    %a{"data-target" => "#sign_in", "data-toggle" => "modal", :type => "button"} 
+      Sign in
 
 / Modal
 #sign_up.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "joinNow", :role => "dialog", :tabindex => "-1"}
