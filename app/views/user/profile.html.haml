@@ -1,0 +1,59 @@
+.container
+  .row
+    .col-md-offset-2.col-md-8.col-lg-offset-3.col-lg-6
+      .well.profile
+        .col-sm-12
+          .col-xs-12.col-sm-8
+            %h2 #{current_user.name}
+            %p
+              %strong Location:
+              Bali, Indonesia
+            %p
+              %strong About:
+              I have everything, contact me if you need something
+            %p
+              %strong Categories:
+              %span.tags Food
+              %span.tags Money
+  
+          .col-xs-12.col-sm-4.text-center
+            %figure
+              %img.img-circle.img-responsive{:alt => "", :src => "http://www.localcrimenews.com/wp-content/uploads/2013/07/default-user-icon-profile.png"}/
+              %figcaption.ratings
+                %p
+                  Ratings
+                  %a{:href => "#"}
+                    %span.fa.fa-star
+                  %a{:href => "#"}
+                    %span.fa.fa-star
+                  %a{:href => "#"}
+                    %span.fa.fa-star
+                  %a{:href => "#"}
+                    %span.fa.fa-star
+                  %a{:href => "#"}
+                    %span.fa.fa-star-o
+        .col-xs-12.divider.text-center
+          .col-xs-12.col-sm-4.emphasis
+            %h2
+              %strong 20
+            %p
+              %small Helps
+            
+          .col-xs-12.col-sm-4.emphasis
+            %h2
+              %strong 5
+            %p
+              %small Needs
+            %button.btn.btn-success.btn-block
+              %span.fa.fa-envelope
+              Message
+          .col-xs-12.col-sm-4.emphasis
+            %h2
+              %strong 15
+            %p
+              %small Helps accepted
+            %button.btn.btn-danger{:type => "button"}
+              %span.fa.fa-times
+              Report this user
+              
+                
