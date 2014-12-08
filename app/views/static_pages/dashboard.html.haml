@@ -1,21 +1,36 @@
 .container-fluid
   .row
     .col-sm-3.col-md-2.sidebar
-      %br
-      %h4 Hello, #{current_user.name} !
-      %ul.nav.nav-sidebar
-        %li.nav-header
-          = link_to 'Dashboard', preview_dashboard_static_pages_path,  :remote => true
-        %li.active
-          = link_to 'Feed', '#' 
-        %li
-          = link_to 'Map', preview_map_static_pages_path,  :remote => true
-        %li
-          = link_to 'Stats', preview_stats_static_pages_path,  :remote => true
-        %li
-          %a{"data-target" => "#new_post", "data-toggle" => "modal", :type => "button"} 
-            %span.glyphicon.glyphicon-plus
-            New Post
+      - 2.times do
+        %br
+      
+      %table.table
+        %thead
+          %tr
+            %th Hello, #{current_user.name} !
+        %tbody
+          %tr
+            %td
+              %span.fa.fa-home
+              = link_to 'Dashboard', preview_dashboard_static_pages_path,  :remote => true
+          %tr
+            %td
+              = link_to 'Feed', '#' 
+          %tr
+            %td
+              %span.fa.fa-home
+              = link_to 'Map', preview_map_static_pages_path,  :remote => true
+          %tr
+            %td
+              %span.fa.fa-home
+              = link_to 'Stats', preview_stats_static_pages_path,  :remote => true
+          %tr
+            %td
+              %a{"data-target" => "#new_post", "data-toggle" => "modal", :type => "button"} 
+                %span.glyphicon.glyphicon-plus
+                New Post
+          
+      
     .col-sm-4.col-md-10
       #dashboard_preview
         = render 'default'

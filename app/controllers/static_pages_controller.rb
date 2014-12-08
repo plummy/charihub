@@ -21,22 +21,26 @@ class StaticPagesController < ApplicationController
 	end
 
 	def preview_dashboard
-		
 		respond_to do | format |
 			format.js {render :layout => false}
 		end
 	end
 
 	def preview_map
-		
+		respond_to do | format |
+			format.js {render :layout => false}
+		end
+	end
+
+	def preview_map
 		respond_to do | format |
 			format.js {render :layout => false}
 		end
 	end
 
 	def preview_stats
-		@post_share = Post.joins(:category).group("categories.name").where(:post_type => 0, :user_id => current_user.id).count
-		@post_need = Post.joins(:category).group("categories.name").where(:post_type => 1, :user_id => current_user.id).count
+		@post_share = Post.joins(:category).group("categories.name").where(:post_type => 0).count
+		@post_need = Post.joins(:category).group("categories.name").where(:post_type => 1).count
 		respond_to do | format |
 			format.js {render :layout => false}
 		end
