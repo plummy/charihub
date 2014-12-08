@@ -5,6 +5,20 @@
       = full_title(yield(:title))
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
+    = javascript_include_tag "//www.google.com/jsapi", "chartkick"
+    %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+    %script{:src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ-owr4UAnauJyc-P-bXMqcMx_fWcaclk", :type => "text/javascript"}
+      :cdata
+    :javascript
+      function initialize() {
+        var mapOptions = {
+          center: { lat: -34.397, lng: 150.644},
+          zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
     = csrf_meta_tags
 
     <!--[if lt IE 9]>

@@ -6,12 +6,11 @@ class User < ActiveRecord::Base
 
 	# Validations
 	validates :name, presence: true
-	
+
+	geocoded_by :full_address
+	after_validation :geocode
+
 	has_many :posts, dependent: :destroy
-
-	#after_create :skip_conf!
-
-	def skip_conf!
-		self.confirm! if Rails.env.development?
-	end
+	has_many :comments, dependent: :destroy
+	
 end
