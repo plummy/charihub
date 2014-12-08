@@ -5,6 +5,8 @@ class StaticPagesController < ApplicationController
 	end
 	def dashboard
 		@post = Post.new
+		@post_share = Post.joins(:category).group("categories.name", :post_type).where(:post_type => 0, :user_id => current_user.id).count
+		@post_need = Post.joins(:category).group("categories.name", :post_type).where(:post_type => 1, :user_id => current_user.id).count
 	end
 
 	def create_post

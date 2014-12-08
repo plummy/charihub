@@ -5,6 +5,7 @@
       = full_title(yield(:title))
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
+    = javascript_include_tag "//www.google.com/jsapi", "chartkick"
     %script{:src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ-owr4UAnauJyc-P-bXMqcMx_fWcaclk", :type => "text/javascript"}
       :cdata
     :javascript
