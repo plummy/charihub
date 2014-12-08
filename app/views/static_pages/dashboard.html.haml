@@ -4,7 +4,7 @@
       %br
       %h4 Hello, #{current_user.name} !
       %ul.nav.nav-sidebar
-        %li.active
+        %li.nav-header
           %a{:href => "#"}
             %span.glyphicon.glyphicon-home
             Dashboard
@@ -23,8 +23,7 @@
             New Post
     .col-sm-4.col-md-10
       #dashboard_preview
-        /= render 'map/map'
-        /= render 'stats/stats'    
+        
     .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
       %h1.page-header Dashboard
       .row.placeholders
