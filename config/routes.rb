@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     member do
       get 'preview_stats'
       get 'preview_map'
+      get 'preview_dashboard'
     end
   end
   match "dashboard/create_post(.:format)" => "static_pages#create_post", as: :create_post, via: :post

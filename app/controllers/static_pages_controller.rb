@@ -20,6 +20,13 @@ class StaticPagesController < ApplicationController
 		end
 	end
 
+	def preview_dashboard
+		
+		respond_to do | format |
+			format.js {render :layout => false}
+		end
+	end
+
 	def preview_map
 		
 		respond_to do | format |

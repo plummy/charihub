@@ -5,14 +5,9 @@
       %h4 Hello, #{current_user.name} !
       %ul.nav.nav-sidebar
         %li.nav-header
-          %a{:href => "#"}
-            %span.glyphicon.glyphicon-home
-            Dashboard
-            %span.sr-only (current)
+          = link_to 'Dashboard', preview_dashboard_static_pages_path,  :remote => true
         %li.active
-          %a{:href => "#"}
-            %span.glyphicon.glyphicon-home
-            Feeds
+          = link_to 'Feed', '#' 
         %li
           = link_to 'Map', preview_map_static_pages_path,  :remote => true
         %li
@@ -23,27 +18,10 @@
             New Post
     .col-sm-4.col-md-10
       #dashboard_preview
+        = render 'default'
         
     .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
-      %h1.page-header Dashboard
-      .row.placeholders
-        .col-xs-6.col-sm-3.placeholder
-          %img.img-responsive{:alt => "Generic placeholder thumbnail", "data-src" => "holder.js/200x200/auto/sky"}
-            %h4 Label
-            %span.text-muted Something else
-        .col-xs-6.col-sm-3.placeholder
-          %img.img-responsive{:alt => "Generic placeholder thumbnail", "data-src" => "holder.js/200x200/auto/vine"}
-            %h4 Label
-            %span.text-muted Something else
-        .col-xs-6.col-sm-3.placeholder
-          %img.img-responsive{:alt => "Generic placeholder thumbnail", "data-src" => "holder.js/200x200/auto/sky"}
-            %h4 Label
-            %span.text-muted Something else
-        .col-xs-6.col-sm-3.placeholder
-          %img.img-responsive{:alt => "Generic placeholder thumbnail", "data-src" => "holder.js/200x200/auto/vine"}
-            %h4 Label
-            %span.text-muted Something else
-      %h2.sub-header Section title
+      
 
 
 #new_post.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "logIn", :role => "dialog", :tabindex => "-1"}
