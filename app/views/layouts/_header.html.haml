@@ -28,7 +28,7 @@
             %li
               %a{:href => user_path} Profile
             %li
-              %a{:href => "#"} Account
+              %a{:href => account_path(@user)} Account
             %li= link_to "Log out", destroy_user_session_path, :method => :delete
       
     / /.navbar-collapse

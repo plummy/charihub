@@ -8,7 +8,7 @@ class UserController < ApplicationController
 	end
 
 	def edit
-		@user = User.new
+		@user = User.find_or_initialize_by(id: current_user.id)
 	end
 
 	def update_profile
@@ -26,6 +26,6 @@ class UserController < ApplicationController
 
 	private
 	def user_params
-		params.require(:user).permit(:name, :full_address, :avatar)
+		params.require(:user).permit(:name, :full_address, :avatar, :about)
 	end
 end

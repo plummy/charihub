@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
 	end
 	def dashboard
 		@post = Post.new
+		@user = User.where(:id => current_user.id)
 		
 	end
 

@@ -1,6 +1,9 @@
-= simple_form_for(@user, :url => update_profile_path, :method => :patch) do |f|
-  = f.input :name
-  = f.input :full_address, placeholder: 'e.g 714 Green St, Big Town, MO'
-  = f.input :about, placeholder: 'Tell me more about yourself :)'
-  = f.input :avatar 
-  = f.button :submit, "Submit!", input_html: { class: 'btn btn-primary' }
+.row
+  .col-md-6.col-md-offset-3
+    .well
+      = simple_form_for(@user, :url => update_profile_path, :method => :patch) do |f|
+        = f.input :name, input_html: {value: @user.name}
+        = f.input :full_address, placeholder: 'e.g 714 Green St, Big Town, MO'
+        = f.input :about, placeholder: 'Tell me more about yourself :)', input_html: {value: @user.about}
+        = f.input :avatar 
+        = f.button :submit, "Submit!", input_html: { class: 'btn btn-primary' }
