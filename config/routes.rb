@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get "/home", to: 'home#index'
   get "/dashboard", to: 'static_pages#dashboard'
-  get "/user", to: 'user#profile'
+  
   #get "/user/update", to: 'user#edit'
 
   resources :posts
@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   match "dashboard/create_post(.:format)" => "static_pages#create_post", as: :create_post, via: :post
   match "user/update(.:format)" => "user#update_profile", as: :update_profile, via: :patch
   get "/user/account(.:format)" => "user#edit", as: :account
+  get "/user/:id(.:format)" => 'user#profile', as: :user
 
 # The priority is based upon order of creation: first created -> highest priority.
 # See how all your routes lay out with "rake routes".

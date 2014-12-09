@@ -1,6 +1,6 @@
 class UserController < ApplicationController
 	def profile
-		@user = User.where(id: current_user.id)
+		@user = User.find(params[:id])
 	end
 
 	def new

@@ -26,7 +26,7 @@
             %span.caret
           %ul.dropdown-menu{:role => "menu"}
             %li
-              %a{:href => user_path} Profile
+              %a{:href => user_path(:id => current_user.id)} Profile
             %li
               %a{:href => account_path(@user)} Account
             %li= link_to "Log out", destroy_user_session_path, :method => :delete
