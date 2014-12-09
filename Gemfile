@@ -87,4 +87,5 @@ gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4"
 
 gem 'country_select'
 gem 'geocoder'
+gem 'paperclip', '~> 4.2'
 
