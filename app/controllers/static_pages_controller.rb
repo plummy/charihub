@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
 
 	def index
-
+		@user = User.where(:id => current_user.id)
 	end
 	def dashboard
 		@post = Post.new
