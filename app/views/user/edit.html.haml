@@ -1,3 +1,5 @@
+- 2.times do
+  %br
 .row
   .col-md-6.col-md-offset-3
     .well
@@ -6,4 +8,5 @@
         = f.input :full_address, placeholder: 'e.g 714 Green St, Big Town, MO'
         = f.input :about, placeholder: 'Tell me more about yourself :)', input_html: {value: @user.about}
         = f.input :avatar 
-        = f.button :submit, "Submit!", input_html: { class: 'btn btn-primary' }
+        = f.button :button, "Update".html_safe, data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}
+        

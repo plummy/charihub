@@ -4,7 +4,7 @@
   = f.input  :email, placeholder: 'Email'
   = f.input  :password, placeholder: 'Password'
   = f.input  :password_confirmation, placeholder: 'Type Password Again'
-  = f.button :submit, input_html: { class: 'btn btn-primary btn-success' }
+  = f.button :button, "Sign up".html_safe, data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}
   - 2.times do
     %br
   .modal-footer

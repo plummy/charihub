@@ -4,7 +4,7 @@
     = f.input :password, required: false
     = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
   .form-actions
-    = f.button :submit, "Log in"
+    = f.button :button, "Sign In".html_safe, data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Sign In..."}
   - 2.times do
     %br
   .modal-footer

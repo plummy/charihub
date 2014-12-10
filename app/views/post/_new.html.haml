@@ -5,4 +5,4 @@
   = f.input :post_type, collection: Post.post_types.map { |k, v| [k.humanize, k] }, :selected => :share_something, :label => "You need something or want to share something?"
   = f.association :category
   
-  = f.button :submit, "Submit!", input_html: { class: 'btn btn-primary' }
+  = f.button :button, "Save Post".html_safe, data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving..."}
